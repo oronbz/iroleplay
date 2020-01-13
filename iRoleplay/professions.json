@@ -1,0 +1,118 @@
+[
+    {
+        "id": "be0b4047-3d2f-46d6-b30d-3963d758efad",
+        "name": "Basic Rules",
+        "professions": [
+            {
+                "id": "8b996fcf-c2da-48a0-a5ea-52e8a06981fa",
+                "name": "Barbarian",
+                "hit_die": 12,
+                "description": "A fierce warrior of primitive background who can enter a battle rage",
+                "abilities": ["S"]
+            },
+            {
+                "id": "c4f72f7c-caed-4dbf-a74a-08d1f11f6163",
+                "name": "Bard",
+                "hit_die": 8,
+                "description": "An inspiring magician whose power echoes the music of creation",
+                "abilities": ["C"]
+            },
+            {
+                "id": "0ee9e1dc-fbe3-4fd4-8710-7b2a596e7765",
+                "name": "Cleric",
+                "hit_die": 8,
+                "description": "A priestly champion who wields divine magic in service of a higher",
+                "abilities": ["W"]
+            },
+            {
+                "id": "8117db6c-85bd-48fe-9136-99cebb4fe32c",
+                "name": "Druid",
+                "hit_die": 8,
+                "description": "A priest of the Old Faith, wielding the powers of nature and adopting animal forms",
+                "abilities": ["W"]
+            },
+            {
+                "id": "9e92b1d3-f35f-4d70-8a87-9ec491b68f87",
+                "name": "Fighter",
+                "hit_die": 10,
+                "description": "A master of martial combat, skilled with a variety of weapons and armor",
+                "abilities": ["S", "D"]
+            },
+            {
+                "id": "acda1445-f2ed-4f47-bdf7-9720d379312c",
+                "name": "Monk",
+                "hit_die": 8,
+                "description": "A master of martial combat, harnessing the power of the body in pursuit of physical and spiritual perfection",
+                "abilities": ["S", "D"]
+            },
+            {
+                "id": "01e92c30-2757-4bb5-9cdf-712ee404e3ad",
+                "name": "Paladin",
+                "hit_die": 10,
+                "description": "A holy warrior bound to a sacred oath",
+                "abilities": ["S", "C"]
+            },
+            {
+                "id": "6b99e23e-2439-4398-8ca2-8acad6ff3123",
+                "name": "Ranger",
+                "hit_die": 10,
+                "description": "A warrior who combats threats on the edges of civilization",
+                "abilities": ["D", "W"]
+            },
+            {
+                "id": "becbc487-d0fe-4c33-a696-9d4fc592016e",
+                "name": "Rogue",
+                "hit_die": 8,
+                "description": "A scoundrel who uses stealth and trickery to overcome obstacles and enemies",
+                "abilities": ["D"]
+            },
+            {
+                "id": "996d788e-dd84-4f09-98cc-660b71203c3b",
+                "name": "Sorcerer",
+                "hit_die": 6,
+                "description": "A spellcaster who draws on inherent magic from a gift or bloodline",
+                "abilities": ["C"]
+            },
+            {
+                "id": "e5f1cc7f-cc7b-4ac6-84d6-e528bc00ceb5",
+                "name": "Warlock",
+                "hit_die": 8,
+                "description": "A wielder of magic that is derived from a bargain with an extraplanar entity",
+                "abilities": ["C"]
+            },
+            {
+                "id": "f26e588a-9eb1-49ed-bcc7-bbcfd31b3213",
+                "name": "Wizard",
+                "hit_die": 6,
+                "description": "A scholarly magic-user capable of manipulating the structures of reality",
+                "abilities": ["I"]
+            }
+        ]
+    },
+    {
+        "id": "5e31cf6f-fad7-4b83-a214-ab9412ac1257",
+        "name": "Eberron: Rising from the Last War",
+        "professions": [
+            {
+                "id": "a580bd91-9c28-4696-b110-6c5622c01886",
+                "name": "Artificer",
+                "hit_die": 8,
+                "description": "Masters of unlocking magic in everyday objects, artificers are supreme inventors",
+                "abilities": ["I"]
+            }
+        ]
+    },
+    {
+        "id": "c35b3259-cb35-4cfe-b68b-e6b851cdb84b",
+        "name": "Critical Role",
+        "professions": [
+            {
+                "id": "af6171ee-349d-47a8-a754-6ad60ad81d73",
+                "name": "Blood Hunter",
+                "hit_die": 10,
+                "description": "A fanatical slayer that embraces dark knowledge to destory evil",
+                "abilities": ["S", "D"]
+            }
+        ]
+    }
+]

@@ -13,6 +13,11 @@
 		82590A3023CCA4800046A8FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82590A2F23CCA4800046A8FE /* Assets.xcassets */; };
 		82590A3323CCA4800046A8FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82590A3223CCA4800046A8FE /* Preview Assets.xcassets */; };
 		82590A3623CCA4800046A8FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82590A3423CCA4800046A8FE /* LaunchScreen.storyboard */; };
+		82590A3E23CCA54E0046A8FE /* professions.json in Resources */ = {isa = PBXBuildFile; fileRef = 82590A3D23CCA54E0046A8FE /* professions.json */; };
+		82590A4023CCA5900046A8FE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A3F23CCA5900046A8FE /* Player.swift */; };
+		82590A4223CCA62A0046A8FE /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A4123CCA62A0046A8FE /* Character.swift */; };
+		82590A4423CCA6620046A8FE /* Profession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A4323CCA6620046A8FE /* Profession.swift */; };
+		82590A4623CCA89E0046A8FE /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A4523CCA89E0046A8FE /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		82590A3223CCA4800046A8FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		82590A3523CCA4800046A8FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82590A3723CCA4800046A8FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82590A3D23CCA54E0046A8FE /* professions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = professions.json; sourceTree = "<group>"; };
+		82590A3F23CCA5900046A8FE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		82590A4123CCA62A0046A8FE /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		82590A4323CCA6620046A8FE /* Profession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profession.swift; sourceTree = "<group>"; };
+		82590A4523CCA89E0046A8FE /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				82590A3423CCA4800046A8FE /* LaunchScreen.storyboard */,
 				82590A3723CCA4800046A8FE /* Info.plist */,
 				82590A3123CCA4800046A8FE /* Preview Content */,
+				82590A3D23CCA54E0046A8FE /* professions.json */,
+				82590A3F23CCA5900046A8FE /* Player.swift */,
+				82590A4123CCA62A0046A8FE /* Character.swift */,
+				82590A4323CCA6620046A8FE /* Profession.swift */,
+				82590A4523CCA89E0046A8FE /* Database.swift */,
 			);
 			path = iRoleplay;
 			sourceTree = "<group>";
@@ -135,6 +150,7 @@
 			files = (
 				82590A3623CCA4800046A8FE /* LaunchScreen.storyboard in Resources */,
 				82590A3323CCA4800046A8FE /* Preview Assets.xcassets in Resources */,
+				82590A3E23CCA54E0046A8FE /* professions.json in Resources */,
 				82590A3023CCA4800046A8FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,8 +163,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				82590A2A23CCA47F0046A8FE /* AppDelegate.swift in Sources */,
+				82590A4423CCA6620046A8FE /* Profession.swift in Sources */,
 				82590A2C23CCA47F0046A8FE /* SceneDelegate.swift in Sources */,
+				82590A4223CCA62A0046A8FE /* Character.swift in Sources */,
 				82590A2E23CCA47F0046A8FE /* ContentView.swift in Sources */,
+				82590A4623CCA89E0046A8FE /* Database.swift in Sources */,
+				82590A4023CCA5900046A8FE /* Player.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
