@@ -16,7 +16,7 @@ struct ProfessionDetail: View {
             Image(profession.image)
             Text(profession.description)
         }
-        .navigationBarTitle(profession.name)
+        .navigationBarTitle(Text(profession.name), displayMode: .inline)
     }
 }
 
