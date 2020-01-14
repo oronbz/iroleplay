@@ -20,6 +20,7 @@ struct ProfessionRow: View {
             
             VStack(alignment: .leading) {
                 Text(profession.name)
+                    .font(.headline)
                 Text("Hit Die: d\(profession.hitDie)")
             }
             
