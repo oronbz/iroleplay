@@ -12,12 +12,18 @@ struct ProfessionDetail: View {
     let profession: Profession
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image(profession.image)
+            Text(profession.description)
+        }
+        .navigationBarTitle(profession.name)
     }
 }
 
 struct ProfessionDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ProfessionDetail(profession: Profession.example)
+        NavigationView {
+            ProfessionDetail(profession: Profession.example)
+        }
     }
 }
