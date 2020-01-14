@@ -9,6 +9,13 @@
 import SwiftUI
 
 struct ProfessionRow: View {
+    
+    static let colors: [String: Color] = ["Strength": .purple,
+                                          "Dexterity": .black,
+                                          "Charisma": .red,
+                                          "Wisdom": .green,
+                                          "Intelligence": .pink]
+    
     let profession: Profession
     
     var body: some View {
@@ -27,7 +34,15 @@ struct ProfessionRow: View {
                     .font(.caption)
             }
             
+            Spacer()
+            
             Text(profession.ability)
+                .font(.caption)
+                .fontWeight(.black)
+                .padding(5)
+                .background(Self.colors[profession.ability])
+                .cornerRadius(5)
+                .foregroundColor(.white)
         }
     }
 }
