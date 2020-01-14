@@ -18,7 +18,7 @@ struct ProfessionRow: View {
                 .scaledToFit()
                 .frame(height: 40)
             
-            VStack {
+            VStack(alignment: .leading) {
                 Text(profession.name)
                 Text("Hit Die: d\(profession.hitDie)")
             }
