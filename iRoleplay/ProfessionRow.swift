@@ -30,6 +30,13 @@ struct ProfessionRow: View {
 
 struct ProfessionRow_Previews: PreviewProvider {
     static var previews: some View {
-        ProfessionRow(profession: Profession.example)
+        NavigationView {
+            List {
+                ProfessionRow(profession: Profession.example)
+                ProfessionRow(profession: Profession.example)
+                ProfessionRow(profession: Profession.example)
+            }
+            .navigationBarTitle("Professions")
+        }
     }
 }
