@@ -16,6 +16,7 @@ struct ContentView: View {
                 Text("Hello World")
                 Text("Hello World")
             }
+            .navigationBarTitle("Professions")
         }
     }
 }
