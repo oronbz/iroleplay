@@ -9,9 +9,11 @@
 import Foundation
 
 class Database {
-    static var rulebook: [ProfessionSection] {
-        return Bundle.main.decode([ProfessionSection].self, from: "professions.json")
+    static var professionBooks: [ProfessionBook] {
+        return Bundle.main.decode([ProfessionBook].self, from: "professions.json")
     }
+    
+    static var races = ["Dragonborn", "Dwarf", "Elf", "Gnome", "Goliath", "Half-Elf", "Halfling", "Half-Orc", "Human", "Tiefling"]
 }
 
 private extension Bundle {

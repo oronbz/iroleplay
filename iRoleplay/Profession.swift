@@ -8,18 +8,18 @@
 
 import Foundation
 
-struct ProfessionSection: Codable, Identifiable {
+struct ProfessionBook: Codable {
     let id: UUID
     let name: String
     let professions: [Profession]
 }
 
-struct Profession: Codable, Equatable, Identifiable {
+struct Profession: Codable, Equatable {
     let id: UUID
     let name: String
     let hitDie: Int
     let description: String
-    let abilities: [String]
+    let ability: String
     
     var icon: String {
         name.replacingOccurrences(of: " ", with: "").lowercased() + "-icon"
@@ -36,6 +36,6 @@ extension Profession {
                                     name: "Wizard",
                                     hitDie: 6,
                                     description: "A scholarly magic-user capable of manipulating the structures of reality",
-                                    abilities: ["I"])
+                                    ability: "Intelligence")
 }
 #endif
