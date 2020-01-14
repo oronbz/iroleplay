@@ -13,11 +13,19 @@ struct ProfessionDetail: View {
     
     var body: some View {
         VStack {
-            Image(profession.image)
-                .resizable()
-                .scaledToFit()
-                .frame(height: 500)
-                .padding()
+            ZStack(alignment: .topTrailing) {
+                Image(profession.image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity, minHeight: 500, maxHeight: 500)
+                    .padding()
+                Image(profession.icon)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 60)
+                    .cornerRadius(5)
+                    .padding()
+            }
 
             HStack {
                 Text(profession.description)
