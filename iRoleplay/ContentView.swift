@@ -15,10 +15,10 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(professionBooks) { book in
-                    Text(book.name)
-                    
-                    ForEach(book.professions) { profession in
-                        Text(profession.name)
+                    Section(header: Text(book.name)) {
+                        ForEach(book.professions) { profession in
+                            Text(profession.name)
+                        }
                     }
                 }
             }
