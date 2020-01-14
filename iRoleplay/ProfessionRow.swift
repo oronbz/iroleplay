@@ -14,6 +14,9 @@ struct ProfessionRow: View {
     var body: some View {
         HStack {
             Image(profession.icon)
+                .resizable()
+                .scaledToFit()
+                .frame(height: 40)
             Text(profession.name)
             Text("Hit Die: d\(profession.hitDie)")
             Text(profession.ability)
