@@ -12,8 +12,12 @@ struct ProfessionRow: View {
     let profession: Profession
     
     var body: some View {
-        Image(profession.icon)
-        Text(profession.name)
+        HStack {
+            Image(profession.icon)
+            Text(profession.name)
+            Text("Hit Die: d\(profession.hitDie)")
+            Text(profession.ability)
+        }
     }
 }
 
