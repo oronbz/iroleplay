@@ -24,6 +24,7 @@ struct ProfessionRow: View {
                 Text(profession.name)
                     .font(.headline)
                 Text("Hit Die: d\(profession.hitDie)")
+                    .font(.caption)
             }
             
             Text(profession.ability)
