@@ -17,8 +17,12 @@ struct ProfessionRow: View {
                 .resizable()
                 .scaledToFit()
                 .frame(height: 40)
-            Text(profession.name)
-            Text("Hit Die: d\(profession.hitDie)")
+            
+            VStack {
+                Text(profession.name)
+                Text("Hit Die: d\(profession.hitDie)")
+            }
+            
             Text(profession.ability)
         }
     }
