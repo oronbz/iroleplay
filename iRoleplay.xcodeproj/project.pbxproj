@@ -18,6 +18,7 @@
 		82590A4223CCA62A0046A8FE /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A4123CCA62A0046A8FE /* Character.swift */; };
 		82590A4423CCA6620046A8FE /* Profession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A4323CCA6620046A8FE /* Profession.swift */; };
 		82590A4623CCA89E0046A8FE /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A4523CCA89E0046A8FE /* Database.swift */; };
+		82C6818623CDD92F00711CC4 /* ProfessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6818523CDD92F00711CC4 /* ProfessionRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		82590A4123CCA62A0046A8FE /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		82590A4323CCA6620046A8FE /* Profession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profession.swift; sourceTree = "<group>"; };
 		82590A4523CCA89E0046A8FE /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		82C6818523CDD92F00711CC4 /* ProfessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				82590A2923CCA47F0046A8FE /* AppDelegate.swift */,
 				82590A2B23CCA47F0046A8FE /* SceneDelegate.swift */,
 				82590A2D23CCA47F0046A8FE /* ContentView.swift */,
+				82C6818523CDD92F00711CC4 /* ProfessionRow.swift */,
 				82590A2F23CCA4800046A8FE /* Assets.xcassets */,
 				82590A3423CCA4800046A8FE /* LaunchScreen.storyboard */,
 				82590A3723CCA4800046A8FE /* Info.plist */,
@@ -168,6 +171,7 @@
 				82590A4223CCA62A0046A8FE /* Character.swift in Sources */,
 				82590A2E23CCA47F0046A8FE /* ContentView.swift in Sources */,
 				82590A4623CCA89E0046A8FE /* Database.swift in Sources */,
+				82C6818623CDD92F00711CC4 /* ProfessionRow.swift in Sources */,
 				82590A4023CCA5900046A8FE /* Player.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
