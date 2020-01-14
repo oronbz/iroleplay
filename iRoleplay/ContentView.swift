@@ -15,9 +15,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(professionBooks) { book in
-                    Text("Hello World")
-                    Text("Hello World")
-                    Text("Hello World")
+                    Text(book.name)
                 }
             }
             .navigationBarTitle("Professions")
