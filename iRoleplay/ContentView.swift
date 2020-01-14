@@ -16,6 +16,10 @@ struct ContentView: View {
             List {
                 ForEach(professionBooks) { book in
                     Text(book.name)
+                    
+                    ForEach(book.professions) { profession in
+                        Text(profession.name)
+                    }
                 }
             }
             .navigationBarTitle("Professions")
