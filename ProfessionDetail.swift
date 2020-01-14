@@ -14,7 +14,15 @@ struct ProfessionDetail: View {
     var body: some View {
         VStack {
             Image(profession.image)
+                .resizable()
+                .scaledToFit()
+                .frame(height: 500)
+                .padding()
+
             Text(profession.description)
+                .padding()
+
+            Spacer()
         }
         .navigationBarTitle(Text(profession.name), displayMode: .inline)
     }
