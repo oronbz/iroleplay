@@ -9,12 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    let professionBooks = Database.professionBooks
+    
     var body: some View {
         NavigationView {
             List {
-                Text("Hello World")
-                Text("Hello World")
-                Text("Hello World")
+                ForEach(professionBooks) { book in
+                    Text("Hello World")
+                    Text("Hello World")
+                    Text("Hello World")
+                }
             }
             .navigationBarTitle("Professions")
         }

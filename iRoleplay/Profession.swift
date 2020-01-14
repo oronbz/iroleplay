@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct ProfessionBook: Codable {
+struct ProfessionBook: Codable, Identifiable {
     let id: UUID
     let name: String
     let professions: [Profession]
 }
 
-struct Profession: Codable, Equatable {
+struct Profession: Codable, Equatable, Identifiable {
     let id: UUID
     let name: String
     let hitDie: Int
