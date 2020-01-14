@@ -17,6 +17,8 @@ struct ProfessionRow: View {
                 .resizable()
                 .scaledToFit()
                 .frame(height: 40)
+                .cornerRadius(5)
+                .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.yellow, lineWidth: 2))
             
             VStack(alignment: .leading) {
                 Text(profession.name)
