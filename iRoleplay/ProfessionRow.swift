@@ -18,6 +18,6 @@ struct ProfessionRow: View {
 
 struct ProfessionRow_Previews: PreviewProvider {
     static var previews: some View {
-        ProfessionRow()
+        ProfessionRow(profession: Profession.example)
     }
 }
