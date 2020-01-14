@@ -19,8 +19,11 @@ struct ProfessionDetail: View {
                 .frame(height: 500)
                 .padding()
 
-            Text(profession.description)
-                .padding()
+            HStack {
+                Text(profession.description)
+                    .padding()
+                Spacer(minLength: 0)
+            }
 
             Spacer()
         }
