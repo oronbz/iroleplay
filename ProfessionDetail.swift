@@ -32,6 +32,8 @@ struct ProfessionDetail: View {
                     .padding()
                 Spacer(minLength: 0)
             }
+            
+            NavigationLink("Choose this profession", destination: Text(profession.name))
 
             Spacer()
         }
