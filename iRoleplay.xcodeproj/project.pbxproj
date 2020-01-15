@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8213808123CF71FC00BA3C99 /* CharacterForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8213808023CF71FC00BA3C99 /* CharacterForm.swift */; };
 		82590A2A23CCA47F0046A8FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A2923CCA47F0046A8FE /* AppDelegate.swift */; };
 		82590A2C23CCA47F0046A8FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A2B23CCA47F0046A8FE /* SceneDelegate.swift */; };
 		82590A2E23CCA47F0046A8FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A2D23CCA47F0046A8FE /* ContentView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8213808023CF71FC00BA3C99 /* CharacterForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterForm.swift; sourceTree = "<group>"; };
 		82590A2623CCA47F0046A8FE /* iRoleplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRoleplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82590A2923CCA47F0046A8FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82590A2B23CCA47F0046A8FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				82C6818723CDEA4800711CC4 /* ProfessionDetail.swift */,
+				8213808023CF71FC00BA3C99 /* CharacterForm.swift */,
 				82590A2823CCA47F0046A8FE /* iRoleplay */,
 				82590A2723CCA47F0046A8FE /* Products */,
 			);
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82C6818823CDEA4800711CC4 /* ProfessionDetail.swift in Sources */,
+				8213808123CF71FC00BA3C99 /* CharacterForm.swift in Sources */,
 				82590A2A23CCA47F0046A8FE /* AppDelegate.swift in Sources */,
 				82590A4423CCA6620046A8FE /* Profession.swift in Sources */,
 				82590A2C23CCA47F0046A8FE /* SceneDelegate.swift in Sources */,
