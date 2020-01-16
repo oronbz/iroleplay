@@ -19,6 +19,7 @@ struct CharacterForm: View {
     @State private var startingEquipment = 0
     @State private var level = 1
     @State private var name = ""
+    @State private var isShowingCharacterAlert = false
     
     var body: some View {
         Form {
@@ -52,6 +53,11 @@ struct CharacterForm: View {
             Section {
                 Button("Create your character") {
                     
+                }
+                .alert(isPresented: $isShowingCharacterAlert) {
+                    Alert(title: Text("Your character is created"),
+                          message: Text("\(name), a level \(level) \(Self.races[race]) \(profession.name)"),
+                          dismissButton: Alert.Button.default(Text("OK")))
                 }
             }
             
