@@ -16,7 +16,7 @@ struct CharacterForm: View {
     @State private var race = 0
     
     var body: some View {
-        VStack {
+        Form {
             Text("Profession: \(profession.name)")
             
             Picker("What is your race?", selection: $race) {
