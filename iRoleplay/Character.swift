@@ -8,10 +8,19 @@
 
 import Foundation
 
-struct Character: Equatable {
+struct Character: Equatable, Identifiable {
+    let id = UUID()
     let profession: Profession
     let name: String
     let race: String
     let level: Int
     let startingEquipment: String
 }
+
+#if DEBUG
+extension Character {
+    static var example: Character {
+        Character(profession: Profession.example, name: "Freak4pc", race: "Goliath", level: 19, startingEquipment: "Staff")
+    }
+}
+#endif

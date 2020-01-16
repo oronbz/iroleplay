@@ -21,3 +21,13 @@ class Player: ObservableObject {
         }
     }
 }
+
+#if DEBUG
+extension Player {
+    static var example: Player {
+        let player = Player()
+        player.add(character: Character.example)
+        return player
+    }
+}
+#endif
