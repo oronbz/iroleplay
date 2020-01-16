@@ -23,6 +23,7 @@ struct AppView: View {
                     Text("Characters")
                 }
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
