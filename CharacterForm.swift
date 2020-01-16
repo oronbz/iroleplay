@@ -52,7 +52,7 @@ struct CharacterForm: View {
             
             Section {
                 Button("Create your character") {
-                    
+                    self.isShowingCharacterAlert = true
                 }
                 .alert(isPresented: $isShowingCharacterAlert) {
                     Alert(title: Text("Your character is created"),
