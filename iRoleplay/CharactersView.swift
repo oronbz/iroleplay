@@ -24,8 +24,8 @@ struct CharactersView: View {
                             .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.yellow, lineWidth: 2))
                         Text("\(character.name), a level \(character.level) \(character.race) \(character.profession.name)")
                     }
-                    
                 }
+                .onDelete(perform: deleteCharacters)
             }
             .navigationBarTitle("My Characters")
         }
