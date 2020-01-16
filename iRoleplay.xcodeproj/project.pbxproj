@@ -29,6 +29,7 @@
 		8213808023CF71FC00BA3C99 /* CharacterForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterForm.swift; sourceTree = "<group>"; };
 		8213808223D066C900BA3C99 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		8213808423D0687900BA3C99 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
+		8213808623D084D300BA3C99 /* iRoleplay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iRoleplay.entitlements; sourceTree = "<group>"; };
 		82590A2623CCA47F0046A8FE /* iRoleplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRoleplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82590A2923CCA47F0046A8FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82590A2B23CCA47F0046A8FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		82590A2823CCA47F0046A8FE /* iRoleplay */ = {
 			isa = PBXGroup;
 			children = (
+				8213808623D084D300BA3C99 /* iRoleplay.entitlements */,
 				82590A2923CCA47F0046A8FE /* AppDelegate.swift */,
 				82590A2B23CCA47F0046A8FE /* SceneDelegate.swift */,
 				82590A2D23CCA47F0046A8FE /* ContentView.swift */,
@@ -324,7 +326,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iRoleplay/iRoleplay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"iRoleplay/Preview Content\"";
 				DEVELOPMENT_TEAM = WZ8GG366SX;
 				ENABLE_PREVIEWS = YES;
@@ -335,6 +339,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bz.oron.iRoleplay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -344,7 +349,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iRoleplay/iRoleplay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"iRoleplay/Preview Content\"";
 				DEVELOPMENT_TEAM = WZ8GG366SX;
 				ENABLE_PREVIEWS = YES;
@@ -355,6 +362,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bz.oron.iRoleplay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
