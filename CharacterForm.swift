@@ -22,30 +22,39 @@ struct CharacterForm: View {
     
     var body: some View {
         Form {
-            Text("Profession: \(profession.name)")
-            
-            Picker("What is your race?", selection: $race) {
-                ForEach(0..<Self.races.count, id: \.self) {
-                    Text(Self.races[$0])
-                }
-            }
-            
-            Toggle(isOn: $hasStartingEquipment.animation()) {
-                Text("Add starting equipment")
-            }
-            
-            if hasStartingEquipment {
-                Picker("What is your starting equipment?", selection: $startingEquipment) {
-                    ForEach(0..<Self.equipments.count, id: \.self) {
-                        Text(Self.equipments[$0])
+            Section {
+                Text("Profession: \(profession.name)")
+                
+                Picker("What is your race?", selection: $race) {
+                    ForEach(0..<Self.races.count, id: \.self) {
+                        Text(Self.races[$0])
                     }
                 }
-                .pickerStyle(SegmentedPickerStyle())
+                
+                Toggle(isOn: $hasStartingEquipment.animation()) {
+                    Text("Add starting equipment")
+                }
+                
+                if hasStartingEquipment {
+                    Picker("What is your starting equipment?", selection: $startingEquipment) {
+                        ForEach(0..<Self.equipments.count, id: \.self) {
+                            Text(Self.equipments[$0])
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                }
+                
+                Stepper("Level: \(level)", value: $level, in: 1...20)
+                
+                TextField("Your name", text: $name)
             }
             
-            Stepper("Level: \(level)", value: $level, in: 1...20)
+            Section {
+                Button("Create your character") {
+                    
+                }
+            }
             
-            TextField("Your name", text: $name)
         }
         .navigationBarTitle(Text("Character Details"), displayMode: .inline)
     }
