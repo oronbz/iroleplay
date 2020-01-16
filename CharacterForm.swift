@@ -28,7 +28,7 @@ struct CharacterForm: View {
                 }
             }
             
-            Toggle(isOn: $hasStartingEquipment) {
+            Toggle(isOn: $hasStartingEquipment.animation()) {
                 Text("Add starting equipment")
             }
             
