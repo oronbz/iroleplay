@@ -28,6 +28,7 @@ struct CharactersView: View {
                 .onDelete(perform: deleteCharacters)
             }
             .navigationBarTitle("My Characters")
+            .navigationBarItems(trailing: EditButton())
         }
     }
     
