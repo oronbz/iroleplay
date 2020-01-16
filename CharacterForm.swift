@@ -11,15 +11,28 @@ import SwiftUI
 struct CharacterForm: View {
     let profession: Profession
     
+    let races = Database.races
+    
+    @State private var race = 0
+    
     var body: some View {
         VStack {
             Text("Profession: \(profession.name)")
+            
+            Picker("What is your race?", selection: $race) {
+                ForEach(0..<races.count) {
+                    Text(self.races[$0])
+                }
+            }
         }
+        .navigationBarTitle(Text("Character Details"), displayMode: .inline)
     }
 }
 
 struct CharacterForm_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterForm(profession: Profession.example)
+        NavigationView {
+            CharacterForm(profession: Profession.example)
+        }
     }
 }
