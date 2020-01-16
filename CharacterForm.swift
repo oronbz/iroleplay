@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct CharacterForm: View {
+    
+    @EnvironmentObject var player: Player
+    
     let profession: Profession
     
     static let races = Database.races
@@ -53,6 +56,12 @@ struct CharacterForm: View {
             Section {
                 Button("Create your character") {
                     self.isShowingCharacterAlert = true
+                    let character = Character(profession: self.profession,
+                                              name: self.name,
+                                              race: Self.races[self.race],
+                                              level: self.level,
+                                              startingEquipment: self.hasStartingEquipment ? Self.equipments[self.startingEquipment] : "")
+                    self.player.add(character: character)
                 }
                 .alert(isPresented: $isShowingCharacterAlert) {
                     Alert(title: Text("Your character is created"),
@@ -67,9 +76,12 @@ struct CharacterForm: View {
 }
 
 struct CharacterForm_Previews: PreviewProvider {
+    static let player = Player()
+    
     static var previews: some View {
         NavigationView {
             CharacterForm(profession: Profession.example)
+                .environmentObject(player)
         }
     }
 }
