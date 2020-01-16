@@ -12,7 +12,9 @@ struct CharacterForm: View {
     let profession: Profession
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Profession: \(profession.name)")
+        }
     }
 }
 
