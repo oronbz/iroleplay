@@ -12,7 +12,7 @@ struct ProfessionDetail: View {
     let profession: Profession
     
     var body: some View {
-        VStack {
+        ScrollView {
             ZStack(alignment: .topTrailing) {
                 Image(profession.image)
                     .resizable()
