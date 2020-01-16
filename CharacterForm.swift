@@ -32,12 +32,14 @@ struct CharacterForm: View {
                 Text("Add starting equipment")
             }
             
-            Picker("What is your starting equipment?", selection: $startingEquipment) {
-                ForEach(0..<equipments.count) {
-                    Text(self.equipments[$0])
+            if hasStartingEquipment {
+                Picker("What is your starting equipment?", selection: $startingEquipment) {
+                    ForEach(0..<equipments.count) {
+                        Text(self.equipments[$0])
+                    }
                 }
+                .pickerStyle(SegmentedPickerStyle())
             }
-            .pickerStyle(SegmentedPickerStyle())
         }
         .navigationBarTitle(Text("Character Details"), displayMode: .inline)
     }
