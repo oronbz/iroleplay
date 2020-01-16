@@ -14,6 +14,9 @@ struct CharacterForm: View {
     let races = Database.races
     
     @State private var race = 0
+    @State private var hasStartingEquipment = false
+    @State private var equipments = ["Sword and Shield", "Staff", "Gold"]
+    @State private var startingEquipment = 0
     
     var body: some View {
         Form {
@@ -24,6 +27,17 @@ struct CharacterForm: View {
                     Text(self.races[$0])
                 }
             }
+            
+            Toggle(isOn: $hasStartingEquipment) {
+                Text("Add starting equipment")
+            }
+            
+            Picker("What is your starting equipment?", selection: $startingEquipment) {
+                ForEach(0..<equipments.count) {
+                    Text(self.equipments[$0])
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle())
         }
         .navigationBarTitle(Text("Character Details"), displayMode: .inline)
     }
