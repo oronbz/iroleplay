@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-class Player {
-    private(set) var characters: [Character] = []
+class Player: ObservableObject {
+    @Published private(set) var characters: [Character] = []
     
     func add(character: Character) {
         characters.append(character)
