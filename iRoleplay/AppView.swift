@@ -17,7 +17,7 @@ struct AppView: View {
                     Text("Create")
                 }
             
-            Text("My Characters")
+            CharactersView()
                 .tabItem {
                     Image(systemName: "person.3.fill")
                     Text("Characters")
