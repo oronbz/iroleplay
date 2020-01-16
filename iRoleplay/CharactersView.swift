@@ -30,6 +30,10 @@ struct CharactersView: View {
             .navigationBarTitle("My Characters")
         }
     }
+    
+    func deleteCharacters(at offsets: IndexSet) {
+        player.characters.remove(atOffsets: offsets)
+    }
 }
 
 struct CharactersView_Previews: PreviewProvider {
