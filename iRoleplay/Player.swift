@@ -9,16 +9,10 @@
 import SwiftUI
 
 class Player: ObservableObject {
-    @Published private(set) var characters: [Character] = []
+    @Published var characters: [Character] = []
     
     func add(character: Character) {
         characters.append(character)
-    }
-    
-    func remove(character: Character) {
-        if let index = characters.firstIndex(of: character) {
-            characters.remove(at: index)
-        }
     }
 }
 
