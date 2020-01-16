@@ -18,6 +18,7 @@ struct CharacterForm: View {
     @State private var hasStartingEquipment = false
     @State private var startingEquipment = 0
     @State private var level = 1
+    @State private var name = ""
     
     var body: some View {
         Form {
@@ -43,6 +44,8 @@ struct CharacterForm: View {
             }
             
             Stepper("Level: \(level)", value: $level, in: 1...20)
+            
+            TextField("Your name", text: $name)
         }
         .navigationBarTitle(Text("Character Details"), displayMode: .inline)
     }
