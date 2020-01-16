@@ -33,7 +33,7 @@ struct ProfessionDetail: View {
                 Spacer(minLength: 0)
             }
             
-            NavigationLink("Choose this profession", destination: Text(profession.name))
+            NavigationLink("Choose this profession", destination: CharacterForm(profession: profession))
 
             Spacer()
         }
