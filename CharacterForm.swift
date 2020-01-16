@@ -11,20 +11,21 @@ import SwiftUI
 struct CharacterForm: View {
     let profession: Profession
     
-    let races = Database.races
+    static let races = Database.races
+    static let equipments = ["Sword and Shield", "Staff", "Gold"]
     
     @State private var race = 0
     @State private var hasStartingEquipment = false
-    @State private var equipments = ["Sword and Shield", "Staff", "Gold"]
     @State private var startingEquipment = 0
+    @State private var level = 1
     
     var body: some View {
         Form {
             Text("Profession: \(profession.name)")
             
             Picker("What is your race?", selection: $race) {
-                ForEach(0..<races.count) {
-                    Text(self.races[$0])
+                ForEach(0..<Self.races.count, id: \.self) {
+                    Text(Self.races[$0])
                 }
             }
             
@@ -34,12 +35,14 @@ struct CharacterForm: View {
             
             if hasStartingEquipment {
                 Picker("What is your starting equipment?", selection: $startingEquipment) {
-                    ForEach(0..<equipments.count) {
-                        Text(self.equipments[$0])
+                    ForEach(0..<Self.equipments.count, id: \.self) {
+                        Text(Self.equipments[$0])
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
             }
+            
+            Stepper("Level: \(level)", value: $level, in: 1...20)
         }
         .navigationBarTitle(Text("Character Details"), displayMode: .inline)
     }
