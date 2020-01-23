@@ -9,15 +9,19 @@
 import SwiftUI
 
 class Player {
-    private(set) var characters: [Character] = []
+    var characters: [Character] = []
     
     func add(character: Character) {
         characters.append(character)
     }
-    
-    func remove(character: Character) {
-        if let index = characters.firstIndex(of: character) {
-            characters.remove(at: index)
-        }
+}
+
+#if DEBUG
+extension Player {
+    static var example: Player {
+        let player = Player()
+        player.add(character: Character.example)
+        return player
     }
 }
+#endif
