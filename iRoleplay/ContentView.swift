@@ -17,7 +17,7 @@ struct ContentView: View {
                 ForEach(professionBooks) { book in
                     Section(header: Text(book.name)) {
                         ForEach(book.professions) { profession in
-                            NavigationLink(destination: ProfessionDetail(profession: profession)) {
+                            NavigationLink(destination: CharacterDetail(profession: profession)) {
                                 ProfessionRow(profession: profession)
                             }
                         }

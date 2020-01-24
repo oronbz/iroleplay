@@ -28,10 +28,8 @@ struct AppView: View {
 }
 
 struct AppView_Previews: PreviewProvider {
-    static let player = Player.example
-    
     static var previews: some View {
         AppView()
-            .environmentObject(player)
+            .environmentObject(Player.example)
     }
 }

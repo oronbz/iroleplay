@@ -159,7 +159,7 @@ var body: some View {
 HStack {
     Image(profession.icon)
     Text(profession.name)
-    Text("Hit Die: d\(profession.hitDie)")
+    Text("HP: \(profession.hitDie)")
     Text(profession.ability)
 }
 ```
@@ -170,6 +170,7 @@ Image(profession.icon)
     .resizable()
     .scaledToFit()
     .frame(height: 40)
+    .cornerRadius(5)
 ```
 
 ## 16. VStack
@@ -178,7 +179,7 @@ HStack {
     Image(profession.icon)
     VStack {
         Text(profession.name)
-        Text("Hit Die: d\(profession.hitDie)")
+        Text("HP: \(profession.hitDie)")
     }
     Text(profession.ability)
 }
@@ -207,27 +208,17 @@ VStack(alignment: .leading) {
  }
 ```
 
-## 19. Add font to name
+## 19. Add font to name and hp
 ```Swift
 VStack(alignment: .leading) {
     Text(profession.name)
         .font(.headline)
-    Text("Hit Die: d\(profession.hitDie)")
+    Text("HP: d\(profession.hitDie)")
+        .font(.caption)
 }
 ```
-## 20. Prettify image
-```Swift
-Image(profession.icon)
-    ...
-    .cornerRadius(5)
-    .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.yellow, lineWidth: 2))
-```
-## 21. Add font name to hit die
-```Swift
-Text("Hit Die: d\(profession.hitDie)")
-    .font(.caption)
-```
-## 22. Prettify Profession ability
+
+## 20. Prettify Profession ability
 ```Swift
 static let colors: [String: Color] = ["Strength": .purple,
                                       "Dexterity": .black,
@@ -251,7 +242,7 @@ HStack {
 }
 ```
 
-## 23. NavigationLink
+## 21. NavigationLink
 #### `-> ContentView.swift`
 ```Swift
 ForEach(professionBooks) { book in
@@ -265,108 +256,10 @@ ForEach(professionBooks) { book in
 }
 ```
 
-## 24. Create ProfessionDetail
-#### `CMD+N -> SwiftUI View -> ProfessionDetail.swift`
-```Swift
-let profession: Profession
-
-var body: some View {
-    VStack {
-        Image(profession.image)
-        Text(profession.description)
-    }
-    .navigationBarTitle(profession.name)
-}
-```
-
-```Swift
-struct ProfessionDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            ProfessionDetail(profession: Profession.example)
-        }
-    }
-}
-```
-
-## 25. Inline navigation bar
-```Swift
-.navigationBarTitle(Text(profession.name), displayMode: .inline)
-```
-
-## 26. Fix image size and alignments
-```Swift
-VStack {
-    Image(profession.image)
-        .resizable()
-        .scaledToFit()
-        .frame(height: 500)
-        .padding()
-
-    Text(profession.description)
-        .padding()
-
-    Spacer()
-}
-```
-
-## 27. Navigate to ProfessionDetail
-#### `-> ContentView.swift`
-```Swift
-NavigationLink(destination: ProfessionDetail(profession: profession)) {
-    ProfessionRow(profession: profession)
-}
-```
-
-## 28. Fix short text (paladin) description alignment
-#### `-> ProfessionDetail.swift`
-```Swift
-HStack {
-    Text(profession.description)
-        .padding()
-    Spacer(minLength: 0)
-}
-```
-
-## 29. ScrollView
-```Swift
-ScrollView {
-    ...
-}
-```
-
-## 30. ZStack
-```Swift
-ZStack(alignment: .topTrailing) {
-    Image(profession.image)
-        .resizable()
-        .scaledToFit()
-        .frame(maxWidth: .infinity, minHeight: 500, maxHeight: 500)
-        .padding()
-    Image(profession.icon)
-        .resizable()
-        .scaledToFit()
-        .frame(height: 60)
-        .cornerRadius(5)
-        .padding()
-}
-```
-
-## 31. Choose this profession button
-```Swift
-VStack {
-    ...
-
-    NavigationLink("Choose this profession", destination: Text(profession.name))
-
-    Spacer()
-}
-```
-
-## 32. Create CharacterDetail
+## 22. Create CharacterDetail
 #### `CMD+N -> SwiftUI View -> CharacterDetail.swift`
 ```Swift
-struct CharacterForm: View {
+struct CharacterDetail: View {
     let profession: Profession
     
     var body: some View {
@@ -376,20 +269,22 @@ struct CharacterForm: View {
     }
 }
 
-struct CharacterForm_Previews: PreviewProvider {
+struct CharacterDetail_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterForm(profession: Profession.example)
+        CharacterDetail(profession: Profession.example)
     }
 }
 ```
 
-## 33. Navigate to CharacterDetail
-#### `-> ProfessionDetail.swift`
+## 23. Navigate to CharacterDetail
+#### `-> ProfessionRow.swift`
 ```Swift
-NavigationLink("Choose this profession", destination: Text(profession.name))
+NavigationLink(destination: CharacterDetail(profession: profession)) {
+    ProfessionRow(profession: profession)
+}
 ```
 
-## 34. State and basic Picker
+## 24. State and basic Picker
 #### `-> CharacterDetail.swift`
 ```Swift
 static let races = Database.races
@@ -411,7 +306,7 @@ var body: some View {
 ```
 
 ```Swift
-struct CharacterForm_Previews: PreviewProvider {
+struct CharacterDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             CharacterDetail(profession: Profession.example)
@@ -421,14 +316,14 @@ struct CharacterForm_Previews: PreviewProvider {
 ```
 
 
-## 35. Form
+## 25. Form
 ```Swift
 Form {
     ...
 }
 ```
 
-## 36. Add starting equipment Toggle and Picker
+## 26. Add starting equipment Toggle and Picker
 ```Swift
 static let races = Database.races
 static let equipments = ["Sword and Shield", "Staff", "Gold"]
@@ -450,7 +345,7 @@ Picker("What is your starting equipment?", selection: $startingEquipment) {
 .pickerStyle(SegmentedPickerStyle())
 ```
 
-## 37. Toggle shows equipment
+## 27. Toggle shows equipment
 ```Swift
 if hasStartingEquipment {
     Picker("What is your starting equipment?", selection: $startingEquipment) {
@@ -462,14 +357,14 @@ if hasStartingEquipment {
 }
 ```
 
-## 38. Animate toggle
+## 28. Animate toggle
 ```Swift
 Toggle(isOn: $hasStartingEquipment.animation()) {
     Text("Add starting equipment")
 }
 ```
 
-## 39. Level Stepper
+## 29. Level Stepper
 ```Swift
 @State private var level = 1
 ```
@@ -477,15 +372,28 @@ Toggle(isOn: $hasStartingEquipment.animation()) {
 Stepper("Level: \(level)", value: $level, in: 1...20)
 ```
 
-## 40. Name TextField
+## 30. Name TextField
 ```Swift
 @State private var name = ""
 ```
 ```Swift
 TextField("Your name", text: $name)
+    .disableAutocorrection(true)
 ```
 
-## 41. Add Sections and create Button
+## 31. Character Image
+```Swift
+HStack {
+    Spacer()
+    Image(profession.image)
+        .resizable()
+        .scaledToFit()
+        .frame(height: 300)
+    Spacer()
+}
+```    
+
+## 32. Add Sections and create Button
 ```Swift
 Section {
     ...
@@ -497,7 +405,7 @@ Section {
 }
 ```
 
-## 42. Create Alert
+## 33. Create Alert
 ```Swift
 @State private var isShowingCharacterAlert = false
 ```
@@ -512,14 +420,14 @@ Button("Create your character") {
 }
 ```
 
-## 43. Present Alert
+## 34. Present Alert
 ```Swift
 Button("Create your character") {
     self.isShowingCharacterAlert = true
 }
 ```
 
-## 44. Player EnvironmentObject
+## 35. Player EnvironmentObject
 #### `-> SceneDelegate.swift`
 ```Swift
 let player = Player()
@@ -529,7 +437,7 @@ let contentView = ContentView()
     .environmentObject(player)
 ```
 
-## 45. ObjservableObject
+## 36. ObjservableObject
 #### `-> Player.swift`
 ```Swift
 class Player: ObservableObject {
@@ -538,7 +446,7 @@ class Player: ObservableObject {
 }
 ```
 
-## 46. Add character to Player
+## 37. Add character to Player
 #### `-> CharacterDetail.swift`
 ```Swift
 @EnvironmentObject var player: Player
@@ -554,51 +462,27 @@ Button("Create your character") {
     self.player.add(character: character)
 }
 ```
-
-## 47. CharactersView
-#### `CMD+N -> SwiftUI View -> CharactersView.swift`
 ```Swift
-struct CharactersView: View {
-    @EnvironmentObject var player: Player
-    
-    var body: some View {
+struct CharacterDetail_Previews: PreviewProvider {
+    static var previews: some View {
         NavigationView {
-            List {
-                ForEach(player.characters) { character in
-                    HStack {
-                        Image(character.profession.icon)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 40)
-                            .cornerRadius(5)
-                            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.yellow, lineWidth: 2))
-                        Text("\(character.name), a level \(character.level) \(character.race) \(character.profession.name)")
-                    }   
-                }
-            }
-            .navigationBarTitle("My Characters")
+            CharacterDetail(profession: Profession.example)
+                .environmentObject(Player.example)
         }
     }
 }
-
-struct CharactersView_Previews: PreviewProvider {
-    static var player = Player.example
-    
-    static var previews: some View {
-        CharactersView()
-            .environmentObject(player)
-    }
-}
-
 ```
 
-## 48. Charcter Identifiable
+## 38. CharactersView
+#### `COPY CharactersView.swift to project`
+
+## 39. Charcter Identifiable
 #### `-> Character.swift`
 ```Swift
 struct Character: Equatable, Identifiable {
 ```
 
-## 49. TabView
+## 40. TabView
 #### `CMD+N -> SwiftUI View -> AppView.swift`
 ```Swift
 struct AppView: View {
@@ -620,22 +504,20 @@ struct AppView: View {
 }
 
 struct AppView_Previews: PreviewProvider {
-    static let player = Player.example
-    
     static var previews: some View {
         AppView()
-            .environmentObject(player)
+            .environmentObject(Player.example)
     }
 }
 ```
 
-## 50. Start with AppView
+## 41. Start with AppView
 #### `-> SceneDelegate.swift`
 ```Swift
 let contentView = AppView()
 ```
 
-## 51. Delete function
+## 42. Delete function
 #### `-> CharactersView.swift`
 ```Swift
 func deleteCharacters(at offsets: IndexSet) {
@@ -643,7 +525,7 @@ func deleteCharacters(at offsets: IndexSet) {
 }
 ```
 
-## 52. On Delete
+## 43. On Delete
 ```Swift
 ForEach(player.characters) { character in
     ...
@@ -651,21 +533,12 @@ ForEach(player.characters) { character in
 .onDelete(perform: deleteCharacters)
 ```
 
-## 53. Edit Button
+## 44. Edit Button
 ```Swift
 .navigationBarTitle("My Characters")
 .navigationBarItems(trailing: EditButton())
 ```
 
-## 54. Fix navigation bar top
-#### `-> AppView.swift`
-```Swift
-TabView {
-    ...
-}
-.edgesIgnoringSafeArea(.top)
-```
-
-## 55. Catalyst
+## 45. Catalyst
 `-> Project`
 - [x] Mac

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8213808123CF71FC00BA3C99 /* CharacterForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8213808023CF71FC00BA3C99 /* CharacterForm.swift */; };
+		8213808123CF71FC00BA3C99 /* CharacterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8213808023CF71FC00BA3C99 /* CharacterDetail.swift */; };
 		8213808323D066C900BA3C99 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8213808223D066C900BA3C99 /* AppView.swift */; };
 		8213808523D0687900BA3C99 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8213808423D0687900BA3C99 /* CharactersView.swift */; };
 		82590A2A23CCA47F0046A8FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A2923CCA47F0046A8FE /* AppDelegate.swift */; };
@@ -22,11 +22,10 @@
 		82590A4423CCA6620046A8FE /* Profession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A4323CCA6620046A8FE /* Profession.swift */; };
 		82590A4623CCA89E0046A8FE /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82590A4523CCA89E0046A8FE /* Database.swift */; };
 		82C6818623CDD92F00711CC4 /* ProfessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6818523CDD92F00711CC4 /* ProfessionRow.swift */; };
-		82C6818823CDEA4800711CC4 /* ProfessionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6818723CDEA4800711CC4 /* ProfessionDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8213808023CF71FC00BA3C99 /* CharacterForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterForm.swift; sourceTree = "<group>"; };
+		8213808023CF71FC00BA3C99 /* CharacterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetail.swift; sourceTree = "<group>"; };
 		8213808223D066C900BA3C99 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		8213808423D0687900BA3C99 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		8213808623D084D300BA3C99 /* iRoleplay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iRoleplay.entitlements; sourceTree = "<group>"; };
@@ -44,7 +43,6 @@
 		82590A4323CCA6620046A8FE /* Profession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profession.swift; sourceTree = "<group>"; };
 		82590A4523CCA89E0046A8FE /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		82C6818523CDD92F00711CC4 /* ProfessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionRow.swift; sourceTree = "<group>"; };
-		82C6818723CDEA4800711CC4 /* ProfessionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +59,6 @@
 		82590A1D23CCA47F0046A8FE = {
 			isa = PBXGroup;
 			children = (
-				82C6818723CDEA4800711CC4 /* ProfessionDetail.swift */,
-				8213808023CF71FC00BA3C99 /* CharacterForm.swift */,
 				82590A2823CCA47F0046A8FE /* iRoleplay */,
 				82590A2723CCA47F0046A8FE /* Products */,
 			);
@@ -82,16 +78,17 @@
 				8213808623D084D300BA3C99 /* iRoleplay.entitlements */,
 				82590A2923CCA47F0046A8FE /* AppDelegate.swift */,
 				82590A2B23CCA47F0046A8FE /* SceneDelegate.swift */,
-				82590A2D23CCA47F0046A8FE /* ContentView.swift */,
-				82C6818523CDD92F00711CC4 /* ProfessionRow.swift */,
 				82590A2F23CCA4800046A8FE /* Assets.xcassets */,
 				82590A3423CCA4800046A8FE /* LaunchScreen.storyboard */,
 				82590A3723CCA4800046A8FE /* Info.plist */,
+				8213808023CF71FC00BA3C99 /* CharacterDetail.swift */,
+				8213808223D066C900BA3C99 /* AppView.swift */,
+				82590A2D23CCA47F0046A8FE /* ContentView.swift */,
+				82C6818523CDD92F00711CC4 /* ProfessionRow.swift */,
+				8213808423D0687900BA3C99 /* CharactersView.swift */,
 				82590A3123CCA4800046A8FE /* Preview Content */,
 				82590A3D23CCA54E0046A8FE /* professions.json */,
 				82590A3F23CCA5900046A8FE /* Player.swift */,
-				8213808223D066C900BA3C99 /* AppView.swift */,
-				8213808423D0687900BA3C99 /* CharactersView.swift */,
 				82590A4123CCA62A0046A8FE /* Character.swift */,
 				82590A4323CCA6620046A8FE /* Profession.swift */,
 				82590A4523CCA89E0046A8FE /* Database.swift */,
@@ -179,8 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82C6818823CDEA4800711CC4 /* ProfessionDetail.swift in Sources */,
-				8213808123CF71FC00BA3C99 /* CharacterForm.swift in Sources */,
+				8213808123CF71FC00BA3C99 /* CharacterDetail.swift in Sources */,
 				8213808523D0687900BA3C99 /* CharactersView.swift in Sources */,
 				82590A2A23CCA47F0046A8FE /* AppDelegate.swift in Sources */,
 				82590A4423CCA6620046A8FE /* Profession.swift in Sources */,

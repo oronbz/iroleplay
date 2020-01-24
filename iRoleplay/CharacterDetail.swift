@@ -1,5 +1,5 @@
 //
-//  CharacterForm.swift
+//  CharacterDetail.swift
 //  iRoleplay
 //
 //  Created by Oron Ben Zvi on 15/01/2020.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CharacterForm: View {
+struct CharacterDetail: View {
     
     @EnvironmentObject var player: Player
     
@@ -51,6 +51,17 @@ struct CharacterForm: View {
                 Stepper("Level: \(level)", value: $level, in: 1...20)
                 
                 TextField("Your name", text: $name)
+                    .disableAutocorrection(true)
+
+                HStack {
+                    Spacer()
+                    Image(profession.image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 300)
+                    Spacer()
+                }
+
             }
             
             Section {
@@ -75,13 +86,11 @@ struct CharacterForm: View {
     }
 }
 
-struct CharacterForm_Previews: PreviewProvider {
-    static let player = Player()
-    
+struct CharacterDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CharacterForm(profession: Profession.example)
-                .environmentObject(player)
+            CharacterDetail(profession: Profession.example)
+                .environmentObject(Player.example)
         }
     }
 }

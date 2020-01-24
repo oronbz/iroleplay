@@ -21,7 +21,6 @@ struct CharactersView: View {
                             .scaledToFit()
                             .frame(height: 40)
                             .cornerRadius(5)
-                            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.yellow, lineWidth: 2))
                         Text("\(character.name), a level \(character.level) \(character.race) \(character.profession.name)")
                     }
                 }
@@ -38,10 +37,8 @@ struct CharactersView: View {
 }
 
 struct CharactersView_Previews: PreviewProvider {
-    static var player = Player.example
-    
     static var previews: some View {
         CharactersView()
-            .environmentObject(player)
+            .environmentObject(Player.example)
     }
 }
