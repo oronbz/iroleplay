@@ -77,7 +77,7 @@ struct CharacterDetail: View {
                 .alert(isPresented: $isShowingCharacterAlert) {
                     Alert(title: Text("Your character is created"),
                           message: Text("\(name), a level \(level) \(Self.races[race]) \(profession.name)"),
-                          dismissButton: Alert.Button.default(Text("OK")))
+                          dismissButton: .default(Text("OK")))
                 }
             }
             
