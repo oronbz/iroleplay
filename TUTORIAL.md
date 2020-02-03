@@ -159,7 +159,7 @@ var body: some View {
 HStack {
     Image(profession.icon)
     Text(profession.name)
-    Text("HP: \(profession.hitDie)")
+    Text("HP: \(profession.hp)")
     Text(profession.ability)
 }
 ```
@@ -179,7 +179,7 @@ HStack {
     Image(profession.icon)
     VStack {
         Text(profession.name)
-        Text("HP: \(profession.hitDie)")
+        Text("HP: \(profession.hp)")
     }
     Text(profession.ability)
 }
