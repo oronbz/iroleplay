@@ -277,7 +277,7 @@ struct CharacterDetail_Previews: PreviewProvider {
 ```
 
 ## 23. Navigate to CharacterDetail
-#### `-> ProfessionRow.swift`
+#### `-> ContentView.swift`
 ```Swift
 NavigationLink(destination: CharacterDetail(profession: profession)) {
     ProfessionRow(profession: profession)
