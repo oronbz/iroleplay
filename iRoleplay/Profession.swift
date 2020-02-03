@@ -17,7 +17,7 @@ struct ProfessionBook: Codable {
 struct Profession: Codable, Equatable {
     let id: UUID
     let name: String
-    let hitDie: Int
+    let hp: Int
     let description: String
     let ability: String
     
@@ -34,7 +34,7 @@ struct Profession: Codable, Equatable {
 extension Profession {
     static let example = Profession(id: UUID(),
                                     name: "Wizard",
-                                    hitDie: 6,
+                                    hp: 6,
                                     description: "A scholarly magic-user capable of manipulating the structures of reality",
                                     ability: "Intelligence")
 }
