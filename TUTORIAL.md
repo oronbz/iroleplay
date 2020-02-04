@@ -480,6 +480,9 @@ struct CharacterDetail_Previews: PreviewProvider {
 #### `-> Character.swift`
 ```Swift
 struct Character: Equatable, Identifiable {
+    let id = UUID()
+    ...
+}
 ```
 
 ## 40. TabView
